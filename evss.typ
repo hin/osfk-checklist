@@ -7,13 +7,26 @@
 
 #show "dots": name => box[#box[width: 1fr, #repeat[.]]]
 
+#let check(item, check) = {
+  item
+  box(width: 1fr, repeat[.])
+  check
+}
+
 #showybox(
-  title: "Före uppsittning",
-  [Daglig tillsyn / walk around dots UTFÖRD]
+  title: "Checklista EVSS SE-MMB/SE-MMC",
+  [Före uppsittning],
+  [
+    + #check([Daglig tillsyn / walk around],[UTFÖRD]) \
+      mera *detaljer* här
+    + #check([Resedagbok \ (Vita-, gula-, rosa sidor, servicelogg)],
+      [OK FLYGA?])
+    + #check([Flytväst, hörlurar, kartor, \ sittdyna, pedaler, säkerhetsbälte],
+      [OK FLYGA?])
+  ],
+  [foobar],
+  [tratt],
+  [mule]
 )
 
 
-Resedagbok \ (Vita-, gula-, rosa sidor, servicelogg) dots OK FLYGA?
-
-Flytväst, hörlurar, kartor, \
-sittdyna, pedaler, säkerhetsbälte #box(width: 1fr, repeat[.]) OK FLYGA?
