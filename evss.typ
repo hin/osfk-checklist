@@ -25,10 +25,21 @@
   leading: 0.4em,
 )
 
-#let check(item, check) = {
+#let checkline(item, check) = {
   item
   box(width: 1fr, repeat[~.~])
   check
+  linebreak()
+}
+
+#let check(item, check, important: false) = {
+  if important {
+    highlight(
+      checkline(item, check)
+    )
+  } else {
+    checkline(item, check)
+  }
 }
 
 #let section(color, heading, checks) = {
@@ -90,9 +101,9 @@
         [
           + #check([Daglig tillsyn / walk around],[UTFÖRD])
           + #check([Resedagbok \ (Vita-, gula-, rosa sidor, servicelogg)],
-            [OK FLYGA?])
+            highlight[OK FLYGA?])
           + #check([Flytväst, hörlurar, kartor, sittdyna, \ pedaler, säkerhetsbälte],
-            [OK FLYGA?])
+            highlight[OK FLYGA?])
         ]
       )
       #section(cground, [= Före motorstart],
@@ -118,7 +129,7 @@
           + #check([CHOKE (vid behov)], [UT])
           + #check([THROTTLE], [TOMGÅNG])
           + #check([KEY], [STARTA])
-          + #check([Oljetryck], [2.0 bar < 10 sek])
+          + #check([Oljetryck], [≥2 bar inom 10 sek], important: true)
           + #check([CHOKE], [IN])
           + #check([Övriga motorvärden], [KONTROLL])
           + #check([GEN + AUX GEN], [CHARGE])
@@ -135,8 +146,8 @@
           + #check([FUEL PUMP], [ON])
           + #check([LDT LIGHT], [ON])
           + #check([SOCKET], [OFF])
-          + #check([Oljetemp], [min 50°C])
-          + #check([4000 r/min MAGNETOS L + R], [< 120 r/min])
+          + #check([Oljetemp], [min 50°C], important: true)
+          + #check([4000 r/min MAGNETOS L + R], highlight[< 120 r/min])
           + #check([4000 r/min CARB HEAT], [CHECK])
           + #check([Bränslekran], [Lämplig])
           + #check([Nödchecklista + TEM], [REPETERA])
@@ -234,11 +245,9 @@
           + #check([BEACON], [OFF])
           + #check([MASTER SWITCH notera Tacho + Hobbs], [OFF])
           + #check([Bränslekran], [OFF])
-          + #check([PARKING BRAKES], [OFF?]) \
+          + #check([PARKING BRAKES], [OFF?])
+          + #check([Färdplan], [Avsluta?], important: true)
             Resedagbok, hangarera/förtöj, kapell, pitotskydd
-          #highlight[
-            + #check([Färdplan], [Avsluta?])
-          ]
         ]
       )
       #block(
@@ -248,11 +257,11 @@
           section(red.transparentize(50%), [= Nödchecklista SE-MMB / SE-MMC], 
             [
               Motorstörning/-bortfall i luften
-              #highlight[
-                + #check([Fart], [59 kt]) \
+              + #check([Fart], [59 kt], important: true)
+                #highlight[
                   Flyg flygplanet \
                   Fält - välj
-              ]
+                ]
               + #check([FUEL PUMP], [ON])
               + #check([Bränslekran], [BÄSTA TANK])
               + #check([CARB HEAT], [UT])
@@ -262,7 +271,7 @@
               + #check([Återstart (om stannat)], [STARTFÖRSÖK])
               + #check([Säkerhetsbälte], [DRA ÅT/INFO PAX])
               + #check([Nödmeddelande], [ATC/121.500])
-              + #check([XPDR], [7700])
+              + #check([Transponder], [7700])
               + #check([Nödsändare PLB + ELT], [ON])
             ]
           )
