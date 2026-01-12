@@ -1,4 +1,5 @@
 #let version = [utkast-2026-01-12a]
+#let side_title = [SE-MMB / SE-MMC]
 
 #let h = 250mm
 
@@ -26,7 +27,7 @@
 
 #let check(item, check) = {
   item
-  box(width: 1fr, repeat[.])
+  box(width: 1fr, repeat[~.~])
   check
 }
 
@@ -41,7 +42,7 @@
     inset: 1mm,
     checks
   )
-  v(2mm)
+  v(1mm)
 }
 
 #block(
@@ -61,7 +62,7 @@
       reflow: true,
       block(
         inset: 2mm,
-        title([Checklista EVSS SE-MMB/SE-MMC])
+        title(side_title)
       )
     ),
 
@@ -181,7 +182,7 @@
       reflow: true,
       block(
         inset: 2mm,
-        title([Checklista EVSS SE-MMB/SE-MMC])
+        title(side_title)
       )
     ),
     [
@@ -273,7 +274,6 @@
       #block(
         height: 1fr,
         width: 100%,
-        stroke: black,
         [
           #set align(center)
           #set align(horizon)
