@@ -36,7 +36,7 @@ def page_bounding_box(page, margin):
     bounding_box[2] += margin
     bounding_box[3] += margin
 
-    print(bounding_box)
+    #print(bounding_box)
 
     return bounding_box
 
