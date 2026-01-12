@@ -5,7 +5,7 @@ all: evss.pdf evss_print.pdf
 watch:
 	typst watch ${TYPST_ARGS} evss.typ
 
-evss.pdf: evss.typ
+evss.pdf: evss.typ checklist.typ
 	typst compile ${TYPST_ARGS} evss.typ
 
 evss_print.pdf: evss.pdf print_page.py

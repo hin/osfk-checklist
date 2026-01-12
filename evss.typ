@@ -27,81 +27,37 @@
   leading: 0.4em,
 )
 
-#let checkline(item, check) = {
-  item
-  box(width: 1fr, repeat[.~])
-  check
-  linebreak()
-}
+#import "checklist.typ"
 
-#let check(item, check, important: false) = {
-  if important {
-    highlight(
-      checkline(item, check)
-    )
-  } else {
-    checkline(item, check)
-  }
-}
+#let check = checklist.check
+#let section = checklist.section
+#let frame = checklist.frame
 
-#let section(color, heading, checks) = {
-  block(
-    fill: color,
-    inset: 1mm,
-    width: 100%,
-    [= #heading]
-  )
-  block(
-    inset: 1mm,
-    checks
-  )
-  v(1mm)
-}
-
-#let frame(side_title, content) = {
-  block(
-    stroke: black + frame_thickness,
-    radius: 2mm,
-    clip: true,
-    width: frame_width,
-    grid(
-      columns: (8mm, frame_width - 8mm),
-      rows: frame_height,
-      fill: (x, y) =>
-        if x == 0 { gray } else { white },
-      inset: 0mm,
-
-      rotate(
-        -90deg,
-        reflow: true,
-        block(
-          inset: 2mm,
-          title(side_title)
-        )
-      ),
-      content
-    )
-  )
-}
-
-#frame(side_title,
+#frame(
+  side_title: side_title,
+  height: frame_height,
+  width: frame_width,
+  thickness: frame_thickness,
   [
     #grid(
       columns: 2,
       box(inset: 1mm,
         image("images/osfk-logo.svg", height: 15mm)
       ),
-      box(inset: 2mm,[
-        #set text(size: 12pt)
-        #set align(center)
-        #set align(horizon)
-        //UTKAST \
-        Evektor Sportstar \
-        #set text(size: 9pt)
-        Version: #version \
-        //http://github.com/hin/typst-checklist
-      ])
-
+      box(
+        inset: 2mm,
+        width: 1fr,
+        [
+          #set text(size: 12pt)
+          #set align(center)
+          #set align(horizon)
+          //UTKAST \
+          Evektor Sportstar \
+          #set text(size: 9pt)
+          Version: #version \
+          //http://github.com/hin/typst-checklist
+        ]
+      )
     )
 
     #section(yellow, [Före uppsittning], 
@@ -195,7 +151,11 @@
 )
 
 
-#frame(side_title,
+#frame(
+  side_title: side_title,
+  height: frame_height,
+  width: frame_width,
+  thickness: frame_thickness,
   [
     #section(cair, [Stigning],
       [
