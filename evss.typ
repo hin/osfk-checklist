@@ -1,4 +1,6 @@
-#let h = 235mm
+#let version = [utkast-2026-01-12a]
+
+#let h = 250mm
 
 #let cground = lime.transparentize(40%)
 #let cair = aqua.transparentize(40%)
@@ -71,8 +73,14 @@
           image("images/osfk-logo.svg", height: 15mm)
         ),
         box(inset: 2mm,[
-          #set text(size: 18pt)
-          UTKAST
+          #set text(size: 12pt)
+          #set align(center)
+          #set align(horizon)
+          //UTKAST \
+          Evektor Sportstar \
+          #set text(size: 9pt)
+          Version: #version \
+          http://github.com/hin/typst-checklist
         ])
 
       )
