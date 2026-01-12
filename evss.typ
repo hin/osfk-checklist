@@ -1,7 +1,7 @@
 #let version = [utkast-2026-01-12a]
 #let side_title = [SE-MMB / SE-MMC]
 
-#let h = 250mm
+#let paper_height = 260mm
 
 #let cground = lime.transparentize(40%)
 #let cair = aqua.transparentize(40%)
@@ -47,7 +47,7 @@
     fill: color,
     inset: 1mm,
     width: 100%,
-    heading
+    [#heading]
   )
   block(
     inset: 1mm,
@@ -62,7 +62,7 @@
   clip: true,
   grid(
     columns: (8mm, 1fr),
-    rows: h,
+    rows: paper_height,
     fill: (x, y) =>
       if x == 0 { gray } else { white },
     //stroke: black,
@@ -97,7 +97,7 @@
 
       )
 
-      #section(yellow, [= Före uppsittning], 
+      #section(yellow, [Före uppsittning], 
         [
           + #check([Daglig tillsyn / walk around],[UTFÖRD])
           + #check([Resedagbok \ (Vita-, gula-, rosa sidor, servicelogg)],
@@ -106,7 +106,7 @@
             highlight[OK FLYGA?])
         ]
       )
-      #section(cground, [= Före motorstart],
+      #section(cground, [Före motorstart],
         [
           + #check([PARKING BRAKES], [OFF])
           + #check([FOOT BRAKES], [IN])
@@ -142,7 +142,7 @@
           + #check([Transponder], [STBY])
         ]
       )
-      #section(cground, [= Motoruppkörning/Run-up area],
+      #section(cground, [Motoruppkörning/Run-up area],
         [
           + #check([TRIM], [NEUTRAL])
           + #check([Roder kontroll], [FULLA UTSLAG])
@@ -161,7 +161,7 @@
         ]
       )
 
-      #section(cground, [= På rullbanan],
+      #section(cground, [På rullbanan],
         [
           + #check([Transponder], [ALT])
           + #check([Avdragspunkt], [FASTSTÄLL])
@@ -191,7 +191,7 @@
   clip: true,
   grid(
     columns: (8mm, 1fr),
-    rows: h,
+    rows: paper_height,
     fill: (x, y) =>
       if x == 0 { gray } else { white },
 
@@ -204,14 +204,14 @@
       )
     ),
     [
-      #section(cair, [= Stigning],
+      #section(cair, [Stigning],
         [
           + #check([Stigfart: klaff T/O], [57 kt])
           + #check([På 300 ft: klaff IN], [65 kt])
           + #check([LDG LIGHT], [OFF])
         ]
       )
-      #section(cair, [= Planflykt/På marschhöjd],
+      #section(cair, [Planflykt/På marschhöjd],
         [
           + #check([Marscheffekt], [4800-5500 r/min])
           + #check([FUEL PUMP], [OFF])
@@ -220,7 +220,7 @@
         ]
       )
 
-      #section(cair, [= Före landning], 
+      #section(cair, [Före landning], 
         [
           + #check([Säkerhetsbälten], [JUSTERA/PAX])
           + #check([Bränslemängd], [KONTROLL])
@@ -232,7 +232,7 @@
         ]
       )
 
-      #section(cair, [= Landningsvarv], 
+      #section(cair, [Landningsvarv], 
         [
           + #check([Medvind: FLAPS T/O (inom vit båge)], [≤ 70 kt])
           + #check([Pådragspunkt], [FASTSTÄLL])
@@ -242,34 +242,34 @@
         ]
       )
 
-      #section(cground, [= Efter landning], 
+      #section(cground, [Efter landning], 
         [
-          + #check([Klaff], [FLAPS 0])
+          + #check([Klaff], [IN])
           + #check([FUEL PUMP], [OFF])
           + #check([LDG LIGHT], [OFF / STBY])
           + #check([Transponder], [STBY])
-          + #check([Landningstid], [Notera])
+          + #check([Landningstid], [notera])
         ]
       )
 
-      #section(cground, [= Parkering / Shut down], 
+      #section(cground, [Parkering / Shut down], 
         [
           + #check([AVIONICS + Elförbrukare utom BEACON], [OFF])
           + #check([GEN + AUX GEN], [OFF])
-          + #check([KEY], [STOP + OUT/krok])
+          + #check([KEY], [STOP + ut (krok)])
           + #check([BEACON], [OFF])
-          + #check([MASTER SWITCH notera Tacho + Hobbs], [OFF])
+          + #check([MASTER SWITCH notera Tacho], [OFF])
           + #check([Bränslekran], [OFF])
           + #check([PARKING BRAKES], [OFF?])
-          + #check([Färdplan], [Avsluta?], important: true)
-            Resedagbok, hangarera/förtöj, kapell, pitotskydd
+          + #check([Färdplan], [AVSLUTA?], important: true) \
+          Resedagbok, hangarera/förtöj, kapell, pitotskydd
         ]
       )
       #block(
         inset: 1mm,
         block(
           stroke: red + 1mm,
-          section(red.transparentize(50%), [= Nödchecklista SE-MMB / SE-MMC], 
+          section(red.transparentize(50%), [Nödchecklista SE-MMB / SE-MMC], 
             [
               Motorstörning/-bortfall i luften
               + #check([Fart], [59 kt], important: true)
