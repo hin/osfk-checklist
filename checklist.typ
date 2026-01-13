@@ -11,7 +11,6 @@
     inset: 1mm,
     checks
   )
-  v(1mm)
 }
 
 #let frame(side_title: "", thickness: 1mm, width: 92mm, height: 100mm, content) = {

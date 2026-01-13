@@ -20,7 +20,7 @@
 )
 
 #set block(
-  spacing: 0mm
+  spacing: 1mm
 )
 
 #set par(
@@ -44,12 +44,14 @@
   [
     #grid(
       columns: 2,
+      rows: 18mm,
       box(inset: 1mm,
-        image("images/osfk-logo.svg", height: 15mm)
+        image("images/osfk-logo.svg", fit: "contain")
       ),
       box(
-        inset: 2mm,
+        inset: 0mm,
         width: 1fr,
+        height: 100%,
         [
           #set text(size: 12pt)
           #set align(center)
