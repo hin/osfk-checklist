@@ -4,7 +4,7 @@
 #let section = checklist.section
 #let frame = checklist.frame
 
-#let frame_height = 270mm
+#let frame_height = 275mm
 #let frame_width = 95mm
 #let frame_thickness = 0.5mm
 
@@ -30,6 +30,8 @@
   leading: 0.4em,
 )
 
+#set heading(numbering: "A.")
+
 #show "..": checklist.dots
 #set strong(delta: 0)
 #show strong: highlight
@@ -38,7 +40,7 @@
   side_title: evss.side_title,
   height: frame_height,
   width: frame_width,
-  thickness: frame_thickness,
+  stroke: black + frame_thickness,
   [
     #grid(
       columns: 2,
@@ -55,85 +57,87 @@
           #set align(center)
           #set align(horizon)
           //UTKAST \
-          Evektor Sportstar \
+          EVSS - Evektor Sportstar \
+          *VFR daylight only* \
           #set text(size: 9pt)
-          Version: #version \
+          Version: #evss.version \
           //http://github.com/hin/typst-checklist
         ]
       )
     )
 
-    #section(yellow, [Före uppsittning], 
+    #section(yellow, [Before boarding], 
       [
-        + Daglig tillsyn / walk around .. utförd
-        + Resedagbok \
-          (Vita-, gula-, rosa sidor, servicelogg) .. *kontroll*
-        + Flytväst, hörlurar, kartor, sittdyna, \
-          pedaler, säkerhetsbälte .. *kontroll*
+        + Pre-flight / walk around .. utförd
+        + *Resedagbok* \
+          (White-, yellow-, pink pages, service log) .. *check*
+        + Lifejacket, headset, maps, *sittdyna*, rudder pedals, \
+          harness, PLB?, first aid kit .. *check*
       ]
     )
-    #section(cground, [Före motorstart],
+    #section(cground, [Before engine starting],
       [
-        + Pedaler och säkerhetsbälten .. justerade
-        + Parkeringsbroms .. släpp
-        + Circuit brakers .. kontrollera
-        + Elförbrukare .. OFF
+        + Rudder pedals and harness .. adjusted
+        + Parking brake .. release
+        + Circuit brakers .. check
+        + *Elförbrukare* .. OFF
         + MASTER SWITCH .. ON
-        + Roder kontroll .. fulla utslag
-        + Klaff kontroll .. IN - T/O - L1 - L2 - IN
-        + Trim .. kontroll
-        + Bränslemängd .. kontroll
-        + Bränslekran .. LEFT
-        + Tacho .. notera
-        + Huv .. stängd & låst
-        + Propellerfält (dragstång) .. fritt
+        + Control stick and rudder pedals .. free
+        + Flaps free .. IN - T/O - L1 - L2 - IN
+        + Trim .. check
+        + Fuel gauge .. check
+        + Fuel selector .. LEFT
+        + Tacho time .. note
+        + Canopy .. closed & locked
+        + Space in propeller area (towhook).. free
       ]
     )
 
-    #section(cground, [Motorstart],
+    #section(cground, [Engine starting],
       [
         + BEACON .. ON
-        + FUEL PUMP .. kontroll, bränsletryck ≥0.15 bar
-        + CHOKE (vid behov) .. UT
-        + THROTTLE .. tomgång
-        + Fotbromsar .. tryck
+        + FUEL PUMP \
+          ON - check fuel pressure - OFF .. ≥0.15 bar
+        + CHOKE (if needed) .. OUT
+        + THROTTLE .. idle
+        + Foot brakes .. apply
         + KEY .. START
-        + *Oljetryck .. ≥2 bar inom 10 sek*
+        + *Oil pressure .. ≥2 bar within 10 sek*
         + CHOKE .. IN
-        + Övriga motorvärden .. kontroll
+        + Engine gauges .. check
         + GEN + AUX GEN .. ON
         + AVIONICS SWITCH + IC .. ON
-        + Motorvärmning .. 2500 rpm
-        + Höjdmätare .. QFE, QNH?
-        + Radio & Navigator .. inställd
+        + Engine warming up .. 2500 rpm
+        + Altimeter .. QFE, QNH?
+        + Radio & Navigator .. set
         + Transponder .. STBY
       ]
     )
-    #section(cground, [Motoruppkörning/Run-up area],
+    #section(cground, [Engine run-up/Run-up area],
       [
-        + Roder kontroll .. fulla utslag
+        + Control stick and rudder pedals .. free
         + TRIM .. neutral
-        + Klaff .. T/O
-        + Bränslekran .. RIGHT
+        + Flaps .. T/O
         + FUEL PUMP .. ON
+        + Fuel selector .. RIGHT
         + LDG LIGHT .. ON
         + SOCKET .. OFF
-        + *Oljetemp .. ≥ 50°C*
-        + Tändningskontroll .. 4000 rpm \
+        + *Oil temperature .. ≥ 50°C*
+        + Ignition check .. 4000 rpm \
           KEY .. L - BOTH- R - BOTH \
-          Varvtal .. drop ≤ 300 rpm, diff ≤ 120 rpm \
-          CARB HEAT .. kontroll
-        + Bränslekran .. bästa tank
-        + Huv .. stängd & låst
-        + Starttid .. notera
-        + Nödchecklista + TEM .. repetera
+          RPM .. drop ≤ 300 rpm, diff ≤ 120 rpm \
+          CARB HEAT .. check
+        + Fuel selector .. best tank
+        + Canopy .. closed & locked
+        + Take-off time .. note
+        + Emergency checklist + TEM .. repeat
       ]
     )
 
-    #section(cground, [På rullbanan],
+    #section(cground, [On the runway],
       [
         + Transponder .. ALT
-        + Avdragspunkt .. fastställ
+        + *Avdragspunkt* .. determine
       ]
     )
 
@@ -145,8 +149,8 @@
         #set align(center)
         #set align(horizon)
         #set text(size: 11pt)
-        Blå - i luften - utantill \
-        Grön - på marken - läs och gör
+        Blue - in the air - by heart \
+        Green - on the ground - read and do
       ]
     )
 
@@ -158,90 +162,93 @@
   side_title: evss.side_title,
   height: frame_height,
   width: frame_width,
-  thickness: frame_thickness,
+  stroke: black + frame_thickness,
   [
-    #section(cair, [Stigning],
+    #section(cair, [Climb],
       [
-        + Stigfart: klaff T/O .. 57 kt
-        + På 300 ft: klaff IN .. 65 kt
+        + Climb speed: Flaps T/O .. 57 kt
+        + At 300 ft: Flaps IN .. 65 kt
         + LDG LIGHT .. OFF
-        + Motorinstrument .. kontroll
+        + Engine instruments .. check
       ]
     )
-    #section(cair, [Planflykt/På marschhöjd],
+    #section(cair, [Cruise/At cruise altitude],
       [
-        + Marscheffekt .. 4800-5500 rpm
+        + Cruise power .. 4800-5500 rpm
         + FUEL PUMP .. OFF
-        + Motorinstrument .. kontroll
-        + SOCKET (vid behov) .. ON
+        + Engine instruments .. check
+        + SOCKET (if needed) .. ON
       ]
     )
 
-    #section(cair, [Före landning], 
+    #section(cair, [Before landing], 
       [
-        + Säkerhetsbälten .. justera
-        + Bränslemängd .. kontroll
-        + Bränslekran .. bästa tank
+        + Harness .. adjust
+        + Fuel gauge .. check
+        + Fuel selector .. best tank
         + SOCKET .. OFF
         + FUEL PUMP .. ON
         + LDG LIGHT .. ON
-        + CARB HEAT .. UT
+        + CARB HEAT .. OUT
       ]
     )
 
-    #section(cair, [Landningsvarv], 
+    #section(cair, [Traffic pattern / circuit], 
       [
-        + Medvind: FLAPS T/O (inom vit båge) .. ≤ 70 kt
-        + Pådragspunkt .. FASTSTÄLL
-        + Bas: FLAPS L1 .. 65 kt
-        + Final: FLAPS L1/L2: .. 57 kt
-        + Kort final: CARB HEAT .. IN
+        + Downwind: Flaps T/O (within white arc) .. ≤ 70 kt
+        + *Pådragspunkt* .. determine
+        + Base: Flaps L1 .. 65 kt
+        + Final: Flaps L1/L2: .. 57 kt
+        + Short final: CARB HEAT .. IN
       ]
     )
 
-    #section(cground, [Efter landning], 
+    #section(cground, [After landing], 
       [
-        + Klaff .. IN
+        + Flaps .. IN
         + FUEL PUMP .. OFF
         + LDG LIGHT .. OFF / STBY
         + Transponder .. STBY
-        + Landningstid .. notera
+        + Touch down time .. note
       ]
     )
 
     #section(cground, [Parkering / Shut down], 
       [
-        + AVIONICS + Elförbrukare utom BEACON .. OFF
+        + AVIONICS .. OFF \
+          electricity consumers except BEACON .. OFF
         + GEN + AUX GEN .. OFF
-        + KEY .. STOP + ut (krok)
+        + KEY .. STOP + out (hook)
         + BEACON .. OFF
-        + MASTER SWITCH notera Tacho .. OFF
-        + Bränslekran .. OFF
+        + MASTER SWITCH note tacho time .. OFF
+        + Fuel selector .. OFF
         + PARKING BRAKES .. OFF?
-        + *Färdplan .. AVSLUTA?* \
-        Resedagbok, hangarera/förtöj, kapell, pitotskydd
+        + *Flight plan .. closed?* \
+        *Resedagbok*, hangar/moor, cover, pitot cap
       ]
     )
+
+    #set heading(numbering: none)
     #block(
       inset: 1mm,
       block(
         stroke: red + 1mm,
-        section(red.transparentize(50%), [Nödchecklista SE-MMB / SE-MMC], 
+        section(red.transparentize(50%), [Emergency checklist EVSS], 
           [
-            Motorstörning/-bortfall i luften
-            + *Fart .. 59 kt* \
-              *Flyg flygplanet* \
-              *Välj fält*
+            Engine malfunction or failure while airborne
+            + *Speed .. 59 kt* \
+              *Fly the aircraft* \
+              *Select landing site*
             + FUEL PUMP .. ON
-            + Bränslekran .. skifta
-            + CARB HEAT .. UT
+            + Fuel selector .. switch
+            + CARB HEAT .. OUT
             + CHOKE .. IN
-            + THROTTLE .. tomgång
-            + KEY L + R .. bästa krets
-            + Återstart (om stannat) .. försök
-            + Säkerhetsbälte .. dra åt / info PAX
+            + THROTTLE .. idle
+            + KEY L + R .. best circuit
+            + Restart (if stopped) .. attempt
+            + Harness .. tighten / info PAX
             + Transponder .. 7700
-            + Nödmeddelande .. 121.5 eller aktuell frekvens
+            + Emergency message .. 121.5 or current frequency
             //+ Nödsändare PLB + ELT .. ON
           ]
         )
