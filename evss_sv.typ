@@ -71,8 +71,8 @@
         + Daglig tillsyn / walk around .. utförd
         + Resedagbok \
           (Vita-, gula-, rosa sidor, servicelogg) .. *kontroll*
-        + Flytväst, hörlurar, kartor, sittdyna, \
-          pedaler, säkerhetsbälte .. *kontroll*
+        + Flytväst, hörlurar, kartor, sittdyna, pedaler, \
+          säkerhetsbälte, PLB?, första förband .. *kontroll*
       ]
     )
     #section(cground, [Före motorstart],
@@ -96,7 +96,8 @@
     #section(cground, [Motorstart],
       [
         + BEACON .. ON
-        + FUEL PUMP .. kontroll, bränsletryck ≥0.15 bar
+        + FUEL PUMP \
+          ON - kontroll bränsletryck - OFF .. ≥0.15 bar
         + CHOKE (vid behov) .. UT
         + THROTTLE .. tomgång
         + Fotbromsar .. tryck
@@ -117,8 +118,8 @@
         + Roder kontroll .. fulla utslag
         + TRIM .. neutral
         + Klaff .. T/O
-        + Bränslekran .. RIGHT
         + FUEL PUMP .. ON
+        + Bränslekran .. RIGHT
         + LDG LIGHT .. ON
         + SOCKET .. OFF
         + *Oljetemp .. ≥ 50°C*
