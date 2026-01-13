@@ -14,9 +14,6 @@
 #let frame_width = 95mm
 #let frame_thickness = 0.5mm
 
-#let cground = lime.transparentize(40%)
-#let cair = aqua.transparentize(40%)
-
 #set page(
   width: frame_width + 5mm,
   height: frame_height + 5mm,
@@ -72,7 +69,7 @@
       )
     )
 
-    #section(yellow, [Before boarding], 
+    #section(checklist.color_preboarding, [Before boarding],
       [
         + Pre-flight / walk around .. performed
         + Aircraft journey/technical log \
@@ -81,7 +78,7 @@
           harness, PLB?, first aid kit .. *check*
       ]
     )
-    #section(cground, [Before engine starting],
+    #section(checklist.color_ground, [Before engine starting],
       [
         + Rudder pedals and harness .. adjust
         + Passenger .. brief
@@ -100,7 +97,7 @@
       ]
     )
 
-    #section(cground, [Engine starting],
+    #section(checklist.color_ground, [Engine starting],
       [
         + BEACON .. ON
         + FUEL PUMP \
@@ -120,7 +117,7 @@
         + Transponder .. STBY
       ]
     )
-    #section(cground, [Engine run-up/Run-up area],
+    #section(checklist.color_ground, [Engine run-up/Run-up area],
       [
         + Control stick and rudder pedals .. free
         + TRIM .. neutral
@@ -141,7 +138,7 @@
       ]
     )
 
-    #section(cground, [On the runway],
+    #section(checklist.color_ground, [On the runway],
       [
         + Transponder .. ALT
         + Abort/reject point .. determine
@@ -170,7 +167,7 @@
   width: frame_width,
   stroke: black + frame_thickness,
   [
-    #section(cair, [Climb],
+    #section(checklist.color_air, [Climb],
       [
         + Climb speed: Flaps T/O .. 57 kt
         + At 300 ft: Flaps IN .. 65 kt
@@ -178,7 +175,7 @@
         + Engine instruments .. check
       ]
     )
-    #section(cair, [Cruise/At cruise altitude],
+    #section(checklist.color_air, [Cruise/At cruise altitude],
       [
         + Cruise power .. 4800-5500 rpm
         + FUEL PUMP .. OFF
@@ -187,7 +184,7 @@
       ]
     )
 
-    #section(cair, [Before landing], 
+    #section(checklist.color_air, [Before landing], 
       [
         + Harness .. adjust
         + Fuel gauge .. check
@@ -199,7 +196,7 @@
       ]
     )
 
-    #section(cair, [Traffic pattern / circuit], 
+    #section(checklist.color_air, [Traffic pattern / circuit], 
       [
         + Downwind: Flaps T/O (within white arc) .. ≤ 70 kt
         + Go-around/Missed approach point .. determine
@@ -209,7 +206,7 @@
       ]
     )
 
-    #section(cground, [After landing], 
+    #section(checklist.color_ground, [After landing], 
       [
         + Flaps .. IN
         + FUEL PUMP .. OFF
@@ -219,7 +216,7 @@
       ]
     )
 
-    #section(cground, [Parking / Shut down], 
+    #section(checklist.color_ground, [Parking / Shut down], 
       [
         + AVIONICS .. OFF
         + Electricity consumers except BEACON .. OFF

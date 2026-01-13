@@ -10,13 +10,9 @@
   Endast VFR dager
 ]
 
-
 #let frame_height = 275mm
 #let frame_width = 95mm
 #let frame_thickness = 0.5mm
-
-#let cground = lime.transparentize(40%)
-#let cair = aqua.transparentize(40%)
 
 #set page(
   width: frame_width + 5mm,
@@ -73,7 +69,7 @@
       )
     )
 
-    #section(yellow, [Före uppsittning], 
+    #section(checklist.color_preboarding, [Före uppsittning], 
       [
         + Daglig tillsyn / walk around .. utförd
         + Resedagbok \
@@ -82,7 +78,8 @@
           säkerhetsbälte, PLB?, första förband .. *kontroll*
       ]
     )
-    #section(cground, [Före motorstart],
+
+    #section(checklist.color_ground, [Före motorstart],
       [
         + Pedaler och säkerhetsbälten .. justera
         + Passagerare .. informera
@@ -101,7 +98,7 @@
       ]
     )
 
-    #section(cground, [Motorstart],
+    #section(checklist.color_ground, [Motorstart],
       [
         + BEACON .. ON
         + FUEL PUMP \
@@ -121,7 +118,8 @@
         + Transponder .. STBY
       ]
     )
-    #section(cground, [Motoruppkörning/Run-up area],
+
+    #section(checklist.color_ground, [Motoruppkörning/Run-up area],
       [
         + Roder kontroll .. fulla utslag
         + TRIM .. neutral
@@ -142,7 +140,7 @@
       ]
     )
 
-    #section(cground, [På rullbanan],
+    #section(checklist.color_ground, [På rullbanan],
       [
         + Transponder .. ALT
         + Avdragspunkt .. fastställ
@@ -171,7 +169,7 @@
   width: frame_width,
   stroke: black + frame_thickness,
   [
-    #section(cair, [Stigning],
+    #section(checklist.color_air, [Stigning],
       [
         + Stigfart: klaff T/O .. 57 kt
         + På 300 ft: klaff IN .. 65 kt
@@ -179,7 +177,7 @@
         + Motorinstrument .. kontroll
       ]
     )
-    #section(cair, [Planflykt/På marschhöjd],
+    #section(checklist.color_air, [Planflykt/På marschhöjd],
       [
         + Marscheffekt .. 4800-5500 rpm
         + FUEL PUMP .. OFF
@@ -188,7 +186,7 @@
       ]
     )
 
-    #section(cair, [Före landning], 
+    #section(checklist.color_air, [Före landning], 
       [
         + Säkerhetsbälten .. justera
         + Bränslemängd .. kontroll
@@ -200,7 +198,7 @@
       ]
     )
 
-    #section(cair, [Landningsvarv], 
+    #section(checklist.color_air, [Landningsvarv], 
       [
         + Medvind: Klaff T/O (inom vit båge) .. ≤ 70 kt
         + Pådragspunkt .. FASTSTÄLL
@@ -210,7 +208,7 @@
       ]
     )
 
-    #section(cground, [Efter landning], 
+    #section(checklist.color_ground, [Efter landning], 
       [
         + Klaff .. IN
         + FUEL PUMP .. OFF
@@ -220,7 +218,7 @@
       ]
     )
 
-    #section(cground, [Parkering / Shut down], 
+    #section(checklist.color_ground, [Parkering / Shut down], 
       [
         + AVIONICS .. OFF
         + Elförbrukare utom BEACON .. OFF
