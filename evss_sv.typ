@@ -4,7 +4,7 @@
 #let section = checklist.section
 #let frame = checklist.frame
 
-#let frame_height = 270mm
+#let frame_height = 275mm
 #let frame_width = 95mm
 #let frame_thickness = 0.5mm
 
@@ -40,7 +40,7 @@
   side_title: evss.side_title,
   height: frame_height,
   width: frame_width,
-  thickness: frame_thickness,
+  stroke: black + frame_thickness,
   [
     #grid(
       columns: 2,
@@ -57,7 +57,7 @@
           #set align(center)
           #set align(horizon)
           //UTKAST \
-          Evektor Sportstar \
+          EVSS - Evektor Sportstar \
           *Endast VFR dager* \
           #set text(size: 9pt)
           Version: #evss.version \
@@ -162,7 +162,7 @@
   side_title: evss.side_title,
   height: frame_height,
   width: frame_width,
-  thickness: frame_thickness,
+  stroke: black + frame_thickness,
   [
     #section(cair, [Stigning],
       [
