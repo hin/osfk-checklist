@@ -1,8 +1,8 @@
 #let dots = box(width: 1fr, repeat[.~])
 
 #let color_preboarding = yellow
-#let color_ground = lime.transparentize(40%)
-#let color_air = blue.transparentize(40%)
+#let color_ground = lime.transparentize(60%)
+#let color_air = blue.transparentize(60%)
 
 #let section(color, heading, checks) = {
   block(
