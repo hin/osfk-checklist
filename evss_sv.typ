@@ -4,6 +4,13 @@
 #let section = checklist.section
 #let frame = checklist.frame
 
+#let side_title = [
+  SE-MMB / SE-MMC - Evektor Sportstar - EVSS
+  #box(width: 1fr, repeat[~])
+  Endast VFR dager
+]
+
+
 #let frame_height = 275mm
 #let frame_width = 95mm
 #let frame_thickness = 0.5mm
@@ -37,7 +44,7 @@
 #show strong: highlight
 
 #frame(
-  side_title: evss.side_title,
+  side_title: side_title,
   height: frame_height,
   width: frame_width,
   stroke: black + frame_thickness,
@@ -87,7 +94,7 @@
         + Trim .. kontroll
         + Bränslemängd .. kontroll
         + Bränslekran .. LEFT
-        + Tacho .. notera
+        + Tachotid .. notera
         + Huv .. stängd & låst
         + Propellerfält (dragstång) .. fritt
       ]
@@ -159,7 +166,7 @@
 
 
 #frame(
-  side_title: evss.side_title,
+  side_title: side_title,
   height: frame_height,
   width: frame_width,
   stroke: black + frame_thickness,

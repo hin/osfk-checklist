@@ -4,7 +4,13 @@
 #let section = checklist.section
 #let frame = checklist.frame
 
-#let frame_height = 275mm
+#let side_title = [
+  SE-MMB / SE-MMC - Evektor Sportstar - EVSS
+  #box(width: 1fr, repeat[~])
+  VRF Daylight only
+]
+
+#let frame_height = 280mm
 #let frame_width = 95mm
 #let frame_thickness = 0.5mm
 
@@ -37,7 +43,7 @@
 #show strong: highlight
 
 #frame(
-  side_title: evss.side_title,
+  side_title: side_title,
   height: frame_height,
   width: frame_width,
   stroke: black + frame_thickness,
@@ -159,7 +165,7 @@
 
 
 #frame(
-  side_title: evss.side_title,
+  side_title: side_title,
   height: frame_height,
   width: frame_width,
   stroke: black + frame_thickness,
