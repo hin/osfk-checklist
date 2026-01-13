@@ -195,10 +195,10 @@
 
     #section(cair, [Landningsvarv], 
       [
-        + Medvind: FLAPS T/O (inom vit båge) .. ≤ 70 kt
+        + Medvind: Klaff T/O (inom vit båge) .. ≤ 70 kt
         + Pådragspunkt .. FASTSTÄLL
-        + Bas: FLAPS L1 .. 65 kt
-        + Final: FLAPS L1/L2: .. 57 kt
+        + Bas: Klaff L1 .. 65 kt
+        + Final: Klaff L1/L2: .. 57 kt
         + Kort final: CARB HEAT .. IN
       ]
     )
