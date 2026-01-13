@@ -1,4 +1,4 @@
-#let version = [utkast-2026-01-12a]
+#let version = [utkast-2026-01-13A]
 #let side_title = [SE-MMB / SE-MMC]
 
 #let frame_height = 270mm
