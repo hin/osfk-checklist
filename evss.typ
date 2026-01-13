@@ -29,9 +29,12 @@
 
 #import "checklist.typ"
 
-#let check = checklist.check
 #let section = checklist.section
 #let frame = checklist.frame
+
+#show "..": checklist.dots
+#set strong(delta: 0)
+#show strong: highlight
 
 #frame(
   side_title: side_title,
@@ -62,75 +65,75 @@
 
     #section(yellow, [Före uppsittning], 
       [
-        + #check([Daglig tillsyn / walk around],[utförd])
-        + #check([Resedagbok \ (Vita-, gula-, rosa sidor, servicelogg)],
-          highlight[kontroll])
-        + #check([Flytväst, hörlurar, kartor, sittdyna, \ pedaler, säkerhetsbälte],
-          highlight[kontroll])
+        + Daglig tillsyn / walk around .. utförd
+        + Resedagbok \
+          (Vita-, gula-, rosa sidor, servicelogg) .. *kontroll*
+        + Flytväst, hörlurar, kartor, sittdyna, \
+          pedaler, säkerhetsbälte .. *kontroll*
       ]
     )
     #section(cground, [Före motorstart],
       [
-        + #check([Pedaler och säkerhetsbälten], [justerade])
-        + #check([Parkeringsbroms], [släpp])
-        + #check([Circuit brakers], [kontrollera])
-        + #check([Elförbrukare], [OFF])
-        + #check([MASTER SWITCH], [ON])
-        + #check([Roder kontroll], [fulla utslag])
-        + #check([Klaff kontroll], [IN - T/O - L1 - L2 - IN])
-        + #check([Trim], [kontroll])
-        + #check([Bränslemängd],[kontroll])
-        + #check([Bränslekran], [LEFT])
-        + #check([Tacho], [notera])
-        + #check([Huv], [stängd & låst])
-        + #check([Propellerfält (dragstång)], [fritt])
+        + Pedaler och säkerhetsbälten .. justerade
+        + Parkeringsbroms .. släpp
+        + Circuit brakers .. kontrollera
+        + Elförbrukare .. OFF
+        + MASTER SWITCH .. ON
+        + Roder kontroll .. fulla utslag
+        + Klaff kontroll .. IN - T/O - L1 - L2 - IN
+        + Trim .. kontroll
+        + Bränslemängd .. kontroll
+        + Bränslekran .. LEFT
+        + Tacho .. notera
+        + Huv .. stängd & låst
+        + Propellerfält (dragstång) .. fritt
       ]
     )
 
     #section(cground, [Motorstart],
       [
-        + #check([BEACON], [ON])
-        + #check([FUEL PUMP], [kontroll, bränsletryck ≥0.15 bar])
-        + #check([CHOKE (vid behov)], [UT])
-        + #check([THROTTLE], [tomgång])
-        + #check([Fotbromsar], [tryck])
-        + #check([KEY], [START])
-        + #check([Oljetryck], [≥2 bar inom 10 sek], important: true)
-        + #check([CHOKE], [IN])
-        + #check([Övriga motorvärden], [kontroll])
-        + #check([GEN + AUX GEN], [ON])
-        + #check([AVIONICS SWITCH + IC], [ON])
-        + #check([Motorvärmning], [2500 rpm])
-        + #check([Höjdmätare], [QFE, QNH?])
-        + #check([Radio & Navigator], [inställd])
-        + #check([Transponder], [STBY])
+        + BEACON .. ON
+        + FUEL PUMP .. kontroll, bränsletryck ≥0.15 bar
+        + CHOKE (vid behov) .. UT
+        + THROTTLE .. tomgång
+        + Fotbromsar .. tryck
+        + KEY .. START
+        + *Oljetryck .. ≥2 bar inom 10 sek*
+        + CHOKE .. IN
+        + Övriga motorvärden .. kontroll
+        + GEN + AUX GEN .. ON
+        + AVIONICS SWITCH + IC .. ON
+        + Motorvärmning .. 2500 rpm
+        + Höjdmätare .. QFE, QNH?
+        + Radio & Navigator .. inställd
+        + Transponder .. STBY
       ]
     )
     #section(cground, [Motoruppkörning/Run-up area],
       [
-        + #check([Roder kontroll], [fulla utslag])
-        + #check([TRIM], [neutral])
-        + #check([Klaff], [T/O])
-        + #check([Bränslekran], [RIGHT])
-        + #check([FUEL PUMP], [ON])
-        + #check([LDG LIGHT], [ON])
-        + #check([SOCKET], [OFF])
-        + #check([Oljetemp], [≥ 50°C], important: true)
-        + #check([Tändningskontroll], [4000 rpm])
-          #check([KEY], [L - BOTH- R - BOTH])
-          #check([Varvtal], [drop ≤ 300 rpm, diff ≤ 120 rpm])
-          #check([CARB HEAT], [kontroll])
-        + #check([Bränslekran], [bästa tank])
-        + #check([Huv], [stängd & låst])
-        + #check([Starttid], [notera])
-        + #check([Nödchecklista + TEM], [repetera])
+        + Roder kontroll .. fulla utslag
+        + TRIM .. neutral
+        + Klaff .. T/O
+        + Bränslekran .. RIGHT
+        + FUEL PUMP .. ON
+        + LDG LIGHT .. ON
+        + SOCKET .. OFF
+        + *Oljetemp .. ≥ 50°C*
+        + Tändningskontroll .. 4000 rpm \
+          KEY .. L - BOTH- R - BOTH \
+          Varvtal .. drop ≤ 300 rpm, diff ≤ 120 rpm \
+          CARB HEAT .. kontroll
+        + Bränslekran .. bästa tank
+        + Huv .. stängd & låst
+        + Starttid .. notera
+        + Nödchecklista + TEM .. repetera
       ]
     )
 
     #section(cground, [På rullbanan],
       [
-        + #check([Transponder], [ALT])
-        + #check([Avdragspunkt], [fastställ])
+        + Transponder .. ALT
+        + Avdragspunkt .. fastställ
       ]
     )
 
@@ -159,63 +162,63 @@
   [
     #section(cair, [Stigning],
       [
-        + #check([Stigfart: klaff T/O], [57 kt])
-        + #check([På 300 ft: klaff IN], [65 kt])
-        + #check([LDG LIGHT], [OFF])
-        + #check([Motorinstrument], [kontroll])
+        + Stigfart: klaff T/O .. 57 kt
+        + På 300 ft: klaff IN .. 65 kt
+        + LDG LIGHT .. OFF
+        + Motorinstrument .. kontroll
       ]
     )
     #section(cair, [Planflykt/På marschhöjd],
       [
-        + #check([Marscheffekt], [4800-5500 rpm])
-        + #check([FUEL PUMP], [OFF])
-        + #check([Motorinstrument], [kontroll])
-        + #check([SOCKET (vid behov)], [ON])
+        + Marscheffekt .. 4800-5500 rpm
+        + FUEL PUMP .. OFF
+        + Motorinstrument .. kontroll
+        + SOCKET (vid behov) .. ON
       ]
     )
 
     #section(cair, [Före landning], 
       [
-        + #check([Säkerhetsbälten], [justera])
-        + #check([Bränslemängd], [kontroll])
-        + #check([Bränslekran], [bästa tank])
-        + #check([SOCKET], [OFF])
-        + #check([FUEL PUMP], [ON])
-        + #check([LDG LIGHT], [ON])
-        + #check([CARB HEAT], [UT])
+        + Säkerhetsbälten .. justera
+        + Bränslemängd .. kontroll
+        + Bränslekran .. bästa tank
+        + SOCKET .. OFF
+        + FUEL PUMP .. ON
+        + LDG LIGHT .. ON
+        + CARB HEAT .. UT
       ]
     )
 
     #section(cair, [Landningsvarv], 
       [
-        + #check([Medvind: FLAPS T/O (inom vit båge)], [≤ 70 kt])
-        + #check([Pådragspunkt], [FASTSTÄLL])
-        + #check([Bas: FLAPS L1], [65 kt])
-        + #check([Final: FLAPS L1/L2:], [57 kt])
-        + #check([Kort final: CARB HEAT], [IN])
+        + Medvind: FLAPS T/O (inom vit båge) .. ≤ 70 kt
+        + Pådragspunkt .. FASTSTÄLL
+        + Bas: FLAPS L1 .. 65 kt
+        + Final: FLAPS L1/L2: .. 57 kt
+        + Kort final: CARB HEAT .. IN
       ]
     )
 
     #section(cground, [Efter landning], 
       [
-        + #check([Klaff], [IN])
-        + #check([FUEL PUMP], [OFF])
-        + #check([LDG LIGHT], [OFF / STBY])
-        + #check([Transponder], [STBY])
-        + #check([Landningstid], [notera])
+        + Klaff .. IN
+        + FUEL PUMP .. OFF
+        + LDG LIGHT .. OFF / STBY
+        + Transponder .. STBY
+        + Landningstid .. notera
       ]
     )
 
     #section(cground, [Parkering / Shut down], 
       [
-        + #check([AVIONICS + Elförbrukare utom BEACON], [OFF])
-        + #check([GEN + AUX GEN], [OFF])
-        + #check([KEY], [STOP + ut (krok)])
-        + #check([BEACON], [OFF])
-        + #check([MASTER SWITCH notera Tacho], [OFF])
-        + #check([Bränslekran], [OFF])
-        + #check([PARKING BRAKES], [OFF?])
-        + #check([Färdplan], [AVSLUTA?], important: true) \
+        + AVIONICS + Elförbrukare utom BEACON .. OFF
+        + GEN + AUX GEN .. OFF
+        + KEY .. STOP + ut (krok)
+        + BEACON .. OFF
+        + MASTER SWITCH notera Tacho .. OFF
+        + Bränslekran .. OFF
+        + PARKING BRAKES .. OFF?
+        + *Färdplan .. AVSLUTA?* \
         Resedagbok, hangarera/förtöj, kapell, pitotskydd
       ]
     )
@@ -226,22 +229,20 @@
         section(red.transparentize(50%), [Nödchecklista SE-MMB / SE-MMC], 
           [
             Motorstörning/-bortfall i luften
-            + #check([Fart], [59 kt], important: true)
-              #highlight[
-                Flyg flygplanet \
-                Välj fält
-              ]
-            + #check([FUEL PUMP], [ON])
-            + #check([Bränslekran], [skifta])
-            + #check([CARB HEAT], [UT])
-            + #check([CHOKE], [IN])
-            + #check([THROTTLE], [tomgång])
-            + #check([KEY L + R], [bästa krets])
-            + #check([Återstart (om stannat)], [försök])
-            + #check([Säkerhetsbälte], [dra åt / info PAX])
-            + #check([Transponder], [7700])
-            + #check([Nödmeddelande], [121.5 eller aktuell frekvens])
-            //+ #check([Nödsändare PLB + ELT], [ON])
+            + *Fart .. 59 kt* \
+              *Flyg flygplanet* \
+              *Välj fält*
+            + FUEL PUMP .. ON
+            + Bränslekran .. skifta
+            + CARB HEAT .. UT
+            + CHOKE .. IN
+            + THROTTLE .. tomgång
+            + KEY L + R .. bästa krets
+            + Återstart (om stannat) .. försök
+            + Säkerhetsbälte .. dra åt / info PAX
+            + Transponder .. 7700
+            + Nödmeddelande .. 121.5 eller aktuell frekvens
+            //+ Nödsändare PLB + ELT .. ON
           ]
         )
 

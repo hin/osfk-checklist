@@ -1,19 +1,4 @@
-#let checkline(item, check) = {
-  item
-  box(width: 1fr, repeat[.~])
-  check
-  linebreak()
-}
-
-#let check(item, check, important: false) = {
-  if important {
-    highlight(
-      checkline(item, check)
-    )
-  } else {
-    checkline(item, check)
-  }
-}
+#let dots = box(width: 1fr, repeat[.~])
 
 #let section(color, heading, checks) = {
   block(
