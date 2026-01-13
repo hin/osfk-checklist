@@ -241,7 +241,7 @@
       inset: 1mm,
       block(
         stroke: red + 1mm,
-        section(red.transparentize(50%), [Nödchecklista SE-MMB / SE-MMC], 
+        section(red.transparentize(50%), [Nödchecklista EVSS], 
           [
             Motorstörning/-bortfall i luften
             + *Fart .. 59 kt* \
