@@ -58,6 +58,7 @@
           #set align(horizon)
           //UTKAST \
           Evektor Sportstar \
+          *Endast VFR dager* \
           #set text(size: 9pt)
           Version: #evss.version \
           //http://github.com/hin/typst-checklist
