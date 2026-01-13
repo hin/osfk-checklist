@@ -61,7 +61,6 @@
           #set align(horizon)
           //UTKAST \
           EVSS - Evektor Sportstar \
-          *VFR daylight only* \
           #set text(size: 9pt)
           Version: #evss.version \
           //http://github.com/hin/typst-checklist
@@ -121,11 +120,11 @@
       [
         + Control stick and rudder pedals .. free
         + TRIM .. neutral
-        + Flaps .. T/O
-        + FUEL PUMP .. ON
-        + Fuel selector .. RIGHT
-        + LDG LIGHT .. ON
         + SOCKET .. OFF
+        + FUEL PUMP .. ON
+        + LDG LIGHT .. ON
+        + Flaps .. T/O
+        + Fuel selector .. RIGHT
         + *Oil temperature .. ≥ 50°C*
         + Ignition check .. 4000 rpm \
           KEY .. L - BOTH- R - BOTH \

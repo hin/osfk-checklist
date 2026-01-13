@@ -10,7 +10,7 @@
   Endast VFR dager
 ]
 
-#let frame_height = 275mm
+#let frame_height = 280mm
 #let frame_width = 95mm
 #let frame_thickness = 0.5mm
 
@@ -61,7 +61,6 @@
           #set align(horizon)
           //UTKAST \
           EVSS - Evektor Sportstar \
-          *Endast VFR dager* \
           #set text(size: 9pt)
           Version: #evss.version \
           //http://github.com/hin/typst-checklist
@@ -123,11 +122,11 @@
       [
         + Roder kontroll .. fulla utslag
         + TRIM .. neutral
-        + Klaff .. T/O
-        + FUEL PUMP .. ON
-        + Bränslekran .. RIGHT
-        + LDG LIGHT .. ON
         + SOCKET .. OFF
+        + FUEL PUMP .. ON
+        + LDG LIGHT .. ON
+        + Klaff .. T/O
+        + Bränslekran .. RIGHT
         + *Oljetemp .. ≥ 50°C*
         + Tändningskontroll .. 4000 rpm \
           KEY .. L - BOTH- R - BOTH \
