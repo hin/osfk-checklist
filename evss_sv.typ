@@ -1,5 +1,8 @@
-#let version = [utkast-2026-01-13A]
-#let side_title = [SE-MMB / SE-MMC]
+#import "evss_common.typ" as evss
+#import "checklist.typ"
+
+#let section = checklist.section
+#let frame = checklist.frame
 
 #let frame_height = 270mm
 #let frame_width = 95mm
@@ -27,17 +30,14 @@
   leading: 0.4em,
 )
 
-#import "checklist.typ"
-
-#let section = checklist.section
-#let frame = checklist.frame
+#set heading(numbering: "A.")
 
 #show "..": checklist.dots
 #set strong(delta: 0)
 #show strong: highlight
 
 #frame(
-  side_title: side_title,
+  side_title: evss.side_title,
   height: frame_height,
   width: frame_width,
   thickness: frame_thickness,
@@ -59,7 +59,7 @@
           //UTKAST \
           Evektor Sportstar \
           #set text(size: 9pt)
-          Version: #version \
+          Version: #evss.version \
           //http://github.com/hin/typst-checklist
         ]
       )
@@ -157,7 +157,7 @@
 
 
 #frame(
-  side_title: side_title,
+  side_title: evss.side_title,
   height: frame_height,
   width: frame_width,
   thickness: frame_thickness,
@@ -224,6 +224,8 @@
         Resedagbok, hangarera/förtöj, kapell, pitotskydd
       ]
     )
+
+    #set heading(numbering: none)
     #block(
       inset: 1mm,
       block(

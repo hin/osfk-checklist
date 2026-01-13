@@ -1,15 +1,25 @@
-TYPST_ARGS=--font-path fonts/Lato
 
-all: evss.pdf evss_print.pdf
+TARGETS = \
+	Checklist_SV_EVSS.pdf \
+	Checklist_EN_EVSS.pdf \
+	Checklist_SV_EVSS_print.pdf \
+	Checklist_EN_EVSS_print.pdf
 
-watch:
-	typst watch ${TYPST_ARGS} evss.typ
+TYPST_ARGS = --font-path fonts/Lato
 
-evss.pdf: evss.typ checklist.typ
-	typst compile ${TYPST_ARGS} evss.typ
+all: ${TARGETS}
 
-evss_print.pdf: evss.pdf print_page.py
-	python3 print_page.py evss.pdf evss_print.pdf
+Checklist_SV_EVSS.pdf: evss_sv.typ checklist.typ evss_common.typ
+	typst compile ${TYPST_ARGS} evss_sv.typ $@
+
+Checklist_EN_EVSS.pdf: evss_en.typ checklist.typ evss_common.typ
+	typst compile ${TYPST_ARGS} evss_en.typ $@
+
+Checklist_SV_EVSS_print.pdf: Checklist_SV_EVSS.pdf print_page.py
+	python3 print_page.py Checklist_SV_EVSS.pdf $@
+
+Checklist_EN_EVSS_print.pdf: Checklist_EN_EVSS.pdf print_page.py
+	python3 print_page.py Checklist_EN_EVSS.pdf $@
 
 clean:
-	rm evss.pdf evss_print.pdf
+	rm -f ${TARGETS}
