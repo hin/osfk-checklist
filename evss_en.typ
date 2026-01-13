@@ -77,7 +77,7 @@
         + Pre-flight / walk around .. performed
         + Aircraft journey/technical log \
           (White-, yellow-, pink pages, service log) .. *check*
-        + Lifejacket, headset, maps, *sittdyna*, rudder pedals, \
+        + Lifejacket, headset, maps, seat cushion, \ rudder pedals,
           harness, PLB?, first aid kit .. *check*
       ]
     )
@@ -85,7 +85,7 @@
       [
         + Rudder pedals and harness .. adjust
         + Passenger .. brief
-        + Parking brake .. releas
+        + Parking brake .. release
         + Circuit brakers .. check
         + Electricity consumers .. OFF
         + MASTER SWITCH .. ON
@@ -96,7 +96,7 @@
         + Fuel selector .. LEFT
         + Tacho time .. note
         + Canopy .. close & lock
-        + Space in propeller area (towhook).. free
+        + Propeller area (tow bar).. clear
       ]
     )
 
@@ -144,7 +144,7 @@
     #section(cground, [On the runway],
       [
         + Transponder .. ALT
-        + *Avdragspunkt* .. determine
+        + Abort/reject point .. determine
       ]
     )
 
@@ -202,7 +202,7 @@
     #section(cair, [Traffic pattern / circuit], 
       [
         + Downwind: Flaps T/O (within white arc) .. ≤ 70 kt
-        + *Pådragspunkt* .. determine
+        + Go-around/Missed approach point .. determine
         + Base: Flaps L1 .. 65 kt
         + Final: Flaps L1/L2: .. 57 kt
         + Short final: CARB HEAT .. IN
@@ -219,7 +219,7 @@
       ]
     )
 
-    #section(cground, [Parkering / Shut down], 
+    #section(cground, [Parking / Shut down], 
       [
         + AVIONICS .. OFF
         + Electricity consumers except BEACON .. OFF
