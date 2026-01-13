@@ -74,8 +74,8 @@
 
     #section(yellow, [Before boarding], 
       [
-        + Pre-flight / walk around .. utförd
-        + *Resedagbok* \
+        + Pre-flight / walk around .. performed
+        + Aircraft journey/technical log \
           (White-, yellow-, pink pages, service log) .. *check*
         + Lifejacket, headset, maps, *sittdyna*, rudder pedals, \
           harness, PLB?, first aid kit .. *check*
@@ -83,10 +83,11 @@
     )
     #section(cground, [Before engine starting],
       [
-        + Rudder pedals and harness .. adjusted
-        + Parking brake .. release
+        + Rudder pedals and harness .. adjust
+        + Passenger .. brief
+        + Parking brake .. releas
         + Circuit brakers .. check
-        + *Elförbrukare* .. OFF
+        + Electricity consumers .. OFF
         + MASTER SWITCH .. ON
         + Control stick and rudder pedals .. free
         + Flaps free .. IN - T/O - L1 - L2 - IN
@@ -94,7 +95,7 @@
         + Fuel gauge .. check
         + Fuel selector .. LEFT
         + Tacho time .. note
-        + Canopy .. closed & locked
+        + Canopy .. close & lock
         + Space in propeller area (towhook).. free
       ]
     )
@@ -147,14 +148,13 @@
       ]
     )
 
-    #line(length: 100%)
     #block(
       height: 1fr,
       width: 100%,
       [
         #set align(center)
         #set align(horizon)
-        #set text(size: 11pt)
+        #set text(size: 10pt)
         Blue - in the air - by heart \
         Green - on the ground - read and do
       ]
@@ -221,16 +221,17 @@
 
     #section(cground, [Parkering / Shut down], 
       [
-        + AVIONICS .. OFF \
-          electricity consumers except BEACON .. OFF
+        + AVIONICS .. OFF
+        + Electricity consumers except BEACON .. OFF
         + GEN + AUX GEN .. OFF
         + KEY .. STOP + out (hook)
         + BEACON .. OFF
-        + MASTER SWITCH note tacho time .. OFF
+        + Tacho time .. note
+        + MASTER SWITCH .. OFF
         + Fuel selector .. OFF
-        + PARKING BRAKES .. OFF?
-        + *Flight plan .. closed?* \
-        *Resedagbok*, hangar/moor, cover, pitot cap
+        + Parking brake .. release
+        + *Flight plan .. close?* \
+        Aircraft journey/technical log, hangar/moor, cover, pitot cap
       ]
     )
 
@@ -262,18 +263,17 @@
       )
     )
 
-    //#line(length: 100%)
     #block(
       height: 1fr,
       width: 100%,
       [
         #set align(center)
         #set align(horizon)
-        #set text(size: 14pt)
+        #set text(size: 13pt)
         AVIATE - NAVIGATE - COMMUNICATE
       ]
     )
-    //#line(length: 100%)
+
   ]
 )
 
