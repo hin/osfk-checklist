@@ -84,7 +84,8 @@
     )
     #section(cground, [Före motorstart],
       [
-        + Pedaler och säkerhetsbälten .. justerade
+        + Pedaler och säkerhetsbälten .. justera
+        + Passagerare .. informera
         + Parkeringsbroms .. släpp
         + Circuit brakers .. kontrollera
         + Elförbrukare .. OFF
@@ -95,7 +96,7 @@
         + Bränslemängd .. kontroll
         + Bränslekran .. LEFT
         + Tachotid .. notera
-        + Huv .. stängd & låst
+        + Huv .. stäng & lås
         + Propellerfält (dragstång) .. fritt
       ]
     )
@@ -148,14 +149,13 @@
       ]
     )
 
-    #line(length: 100%)
     #block(
       height: 1fr,
       width: 100%,
       [
         #set align(center)
         #set align(horizon)
-        #set text(size: 11pt)
+        #set text(size: 10pt)
         Blå - i luften - utantill \
         Grön - på marken - läs och gör
       ]
@@ -222,14 +222,16 @@
 
     #section(cground, [Parkering / Shut down], 
       [
-        + AVIONICS + Elförbrukare utom BEACON .. OFF
+        + AVIONICS .. OFF
+        + Elförbrukare utom BEACON .. OFF
         + GEN + AUX GEN .. OFF
         + KEY .. STOP + ut (krok)
         + BEACON .. OFF
-        + MASTER SWITCH notera Tacho .. OFF
+        + Tachotid .. notera
+        + MASTER SWITCH .. OFF
         + Bränslekran .. OFF
-        + PARKING BRAKES .. OFF?
-        + *Färdplan .. AVSLUTA?* \
+        + Parkeringsbroms .. släpp
+        + *Färdplan .. avsluta?* \
         Resedagbok, hangarera/förtöj, kapell, pitotskydd
       ]
     )
@@ -269,7 +271,7 @@
       [
         #set align(center)
         #set align(horizon)
-        #set text(size: 14pt)
+        #set text(size: 13pt)
         AVIATE - NAVIGATE - COMMUNICATE
       ]
     )
