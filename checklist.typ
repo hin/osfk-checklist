@@ -52,14 +52,13 @@
           ),
         ),
         [
-        #set enum(
-          numbering: (num) => {
-            box(width: 5mm, text(str(num) + "."))
-          },
-          //spacing: .2em // Adjust spacing as needed
-        )
-        #content
-
+          #set enum(
+            numbering: (num) => {
+              box(width: 5mm, text(str(num) + "."))
+            },
+            //spacing: .2em // Adjust spacing as needed
+          )
+          #content
         ]
       )
     )
