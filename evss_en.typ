@@ -270,6 +270,16 @@
       ]
     )
 
+    #block(
+      width: 100%,
+      inset: 1mm,
+      [
+        #set align(right + bottom)
+        #set text(size: 8pt)
+        https://github.com/hin/osfk-checklist
+      ]
+    )
+
   ]
 )
 
