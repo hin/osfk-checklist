@@ -1,4 +1,11 @@
-# Checklistor med Typst
+# ÖSFK Checklistor
+
+## Beskrivning
+
+Checklistorna skapas ifrån en textfil som beskriver både innehållet och
+utseendet. Dessa körs genom ett program (Typst) som skapar en PDF-fil
+lämplig för utskrift. Poängen med detta är att det ger en mycket exakt
+kontroll över utseendet.
 
 ## Nödvändiga programvaror för att skapa filerna
 
