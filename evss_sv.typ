@@ -83,7 +83,7 @@
         + Pedaler och säkerhetsbälten .. justera
         + Passagerare .. informera
         + Parkeringsbroms .. släpp
-        + Circuit brakers .. kontrollera
+        + Circuit brakers .. kontroll
         + Elförbrukare .. OFF
         + MASTER SWITCH .. ON
         + Roder kontroll .. fulla utslag
