@@ -7,7 +7,7 @@
 #let side_title = [
   SE-MMB / SE-MMC - Evektor Sportstar - EVSS
   #box(width: 1fr, repeat[~])
-  VRF Daylight only
+  VFR Daylight only
 ]
 
 #let frame_height = 280mm

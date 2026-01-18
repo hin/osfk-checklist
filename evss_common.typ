@@ -1,1 +1,1 @@
-#let version = [utkast-2026-01-13D]
+#let version = [utkast-2026-01-18A]
