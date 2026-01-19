@@ -73,8 +73,8 @@
         + Daglig tillsyn / walk around .. utförd
         + Resedagbok \
           (Vita-, gula-, rosa sidor, servicelogg) .. *kontroll*
-        + Flytväst, hörlurar, kartor, sittdyna, pedaler, \
-          säkerhetsbälte, PLB?, första förband .. *kontroll*
+        + Flytväst + PLB, hörlurar, kartor, sittdyna, pedaler, \
+          säkerhetsbälte, första förband .. *kontroll*
       ]
     )
 

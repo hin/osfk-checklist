@@ -73,8 +73,8 @@
         + Pre-flight / walk around .. performed
         + Aircraft journey/technical log \
           (White-, yellow-, pink pages, service log) .. *check*
-        + Lifejacket, headset, maps, seat cushion, \ rudder pedals,
-          harness, PLB?, first aid kit .. *check*
+        + Lifejacket + PLB, headset, maps, seat cushion, \ rudder pedals,
+          harness, first aid kit .. *check*
       ]
     )
     #section(checklist.color_ground, [Before engine starting],
